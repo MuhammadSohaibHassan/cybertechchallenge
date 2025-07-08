@@ -1,0 +1,32 @@
+/* Tools Styles */
+.tool-simple {
+    padding: 20px;
+}
+
+.input-row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.result-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.copy-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#copy-password {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#copy-password:hover {
+    background: none;
+} 

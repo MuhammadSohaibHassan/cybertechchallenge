@@ -1,0 +1,10 @@
+/* Import global styles */
+@import 'global/variables.css';
+@import 'global/reset.css';
+
+/* Import component styles */
+@import 'components/desktop.css';
+@import 'components/windows.css';
+@import 'components/taskbar.css';
+@import 'components/terminal.css';
+@import 'components/tools.css'; 

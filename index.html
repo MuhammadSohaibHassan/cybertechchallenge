@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShell OS</title>
+    <!-- External Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Desktop UI -->
+    <div class="desktop">
+        <!-- Vertical Icon Bar -->
+        <div class="vertical-icons">
+            <div class="icon-container" data-window="terminal">
+                <i class="fas fa-terminal"></i>
+                <span>Terminal</span>
+            </div>
+            <div class="icon-container" data-window="tasks">
+                <i class="fas fa-folder"></i>
+                <span>Tasks</span>
+            </div>
+            <div class="icon-container" data-window="learning">
+                <i class="fas fa-book"></i>
+                <span>Learning</span>
+            </div>
+            <div class="icon-container" data-window="help">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </div>
+            <div class="icon-container" data-window="tools">
+                <i class="fas fa-tools"></i>
+                <span>Tools</span>
+            </div>
+            <div class="icon-container" data-window="network">
+                <i class="fas fa-network-wired"></i>
+                <span>Network</span>
+            </div>
+        </div>
+
+        <!-- Application Windows -->
+        <!-- Tasks Window -->
+        <div class="window" id="tasks-window">
+            <div class="window-header">
+                <span class="window-title">Tasks</span>
+                <div class="window-controls">
+                    <span class="minimize">−</span>
+                    <span class="maximize">□</span>
+                    <span class="close">×</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="folder-grid">
+                    <div class="folder" data-task="1">
+                        <i class="fas fa-folder"></i>
+                        <span>Task 1: Power Grid</span>
+                    </div>
+                    <div class="folder disabled" data-task="2">
+                        <i class="fas fa-folder"></i>
+                        <span>Task 2: Locked</span>
+                    </div>
+                    <div class="folder disabled" data-task="3">
+                        <i class="fas fa-folder"></i>
+                        <span>Task 3: Locked</span>
+                    </div>
+                    <div class="folder disabled" data-task="4">
+                        <i class="fas fa-folder"></i>
+                        <span>Task 4: Locked</span>
+                    </div>
+                    <div class="folder disabled" data-task="5">
+                        <i class="fas fa-folder"></i>
+                        <span>Task 5: Locked</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terminal Window -->
+        <div class="window" id="terminal-window">
+            <div class="window-header">
+                <span class="window-title">Terminal</span>
+                <div class="window-controls">
+                    <span class="minimize">−</span>
+                    <span class="maximize">□</span>
+                    <span class="close">×</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <div id="terminal"></div>
+            </div>
+        </div>
+
+        <!-- Help Window -->
+        <div class="window" id="help-window">
+            <div class="window-header">
+                <span class="window-title">Help</span>
+                <div class="window-controls">
+                    <span class="minimize">−</span>
+                    <span class="maximize">□</span>
+                    <span class="close">×</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="help-content">
+                    <h3>Help Window</h3>
+                    <p>This is a placeholder for the help window content.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Learning Window -->
+        <div class="window" id="learning-window">
+            <div class="window-header">
+                <span class="window-title">Learning</span>
+                <div class="window-controls">
+                    <span class="minimize">−</span>
+                    <span class="maximize">□</span>
+                    <span class="close">×</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="placeholder-content">
+                    <h3>Learning Resources</h3>
+                    <p>This section will contain cybersecurity learning materials.</p>
+                    <p>Coming soon...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Network Window -->
+        <div class="window" id="network-window">
+            <div class="window-header">
+                <span class="window-title">Network</span>
+                <div class="window-controls">
+                    <span class="minimize">−</span>
+                    <span class="maximize">□</span>
+                    <span class="close">×</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="placeholder-content">
+                    <h3>Network Tools</h3>
+                    <p>Network analysis and monitoring tools will be available here.</p>
+                    <p>Coming soon...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools Window -->
+        <div class="window" id="tools-window">
+            <div class="window-header">
+                <span class="window-title">Tools</span>
+                <div class="window-controls">
+                    <span class="minimize">−</span>
+                    <span class="maximize">□</span>
+                    <span class="close">×</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="grid-container">
+                    <div class="grid-item" data-tool="md5-cracker">
+                        <i class="fas fa-lock"></i>
+                        <span>MD5 Cracker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MD5 Cracker Window -->
+        <div class="window" id="md5-cracker-window">
+            <div class="window-header">
+                <span class="window-title">MD5 Cracker</span>
+                <div class="window-controls">
+                    <span class="minimize">−</span>
+                    <span class="maximize">□</span>
+                    <span class="close">×</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="tool-simple">
+                    <div class="input-row">
+                        <input type="text" id="md5-input" placeholder="Enter MD5 hash...">
+                        <button id="start-crack">Crack</button>
+                    </div>
+                    <div class="result-row" id="result-container" style="display: none;">
+                        <span>Password: </span>
+                        <span id="crack-password">-</span>
+                        <button id="copy-password" title="Copy to clipboard">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMGZmMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cmVjdCB4PSI5IiB5PSI5IiB3aWR0aD0iMTMiIGhlaWdodD0iMTMiIHJ4PSIyIiByeT0iMiI+PC9yZWN0PjxwYXRoIGQ9Ik01IDE1SDRhMiAyIDAgMCAxLTItMlY0YTIgMiAwIDAgMSAyLTJoOWEyIDIgMCAwIDEgMiAydjEiPjwvcGF0aD48L3N2Zz4=" alt="Copy" class="copy-icon">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Taskbar -->
+    <div class="taskbar">
+        <div class="start-button">
+            <i class="fas fa-terminal"></i> CyberShell
+        </div>
+        <div class="taskbar-right">
+            <span class="time"></span>
+        </div>
+    </div>
+
+    <!-- Application Scripts -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html> 

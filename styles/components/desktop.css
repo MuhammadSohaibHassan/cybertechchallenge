@@ -1,0 +1,100 @@
+/* Desktop Styles */
+.desktop {
+    height: calc(100vh - var(--taskbar-height));
+    position: relative;
+    overflow: hidden;
+    background: url('../../assets/background.avif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Add a dark overlay to improve readability */
+.desktop::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+
+.vertical-icons {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: var(--icon-size);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.icon-container {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.icon-container:hover {
+    transform: scale(1.1);
+}
+
+.icon-container i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.icon-container span {
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Grid Layouts */
+.folder-grid, .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.folder, .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.folder:hover, .grid-item:hover {
+    border-color: var(--border-color);
+    background: rgba(0, 255, 0, 0.1);
+}
+
+.folder.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    color: var(--disabled-color);
+}
+
+.folder i, .grid-item i {
+    font-size: 32px;
+}
+
+.folder span, .grid-item span {
+    text-align: center;
+    font-size: 14px;
+} 
