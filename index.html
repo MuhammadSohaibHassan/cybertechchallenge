@@ -11,6 +11,21 @@
 <body>
     <!-- Desktop UI -->
     <div class="desktop">
+        <!-- Progress Indicators -->
+        <div class="progress-indicators">
+            <div class="indicator">
+                <span>Total Score</span>
+                <span class="indicator-value" id="total-score">0</span>
+            </div>
+            <div class="indicator">
+                <span>Tasks Progress</span>
+                <span class="indicator-value" id="tasks-progress">0/5</span>
+            </div>
+            <button class="reset-button" id="reset">
+                <i class="fas fa-undo"></i> Reset
+            </button>
+        </div>
+
         <!-- Vertical Icon Bar -->
         <div class="vertical-icons">
             <div class="icon-container" data-window="terminal">
@@ -54,7 +69,7 @@
                 <div class="folder-grid">
                     <div class="folder" data-task="1">
                         <i class="fas fa-folder"></i>
-                        <span>Task 1: Power Grid</span>
+                        <span>Task 1: Phishing Detection</span>
                     </div>
                     <div class="folder disabled" data-task="2">
                         <i class="fas fa-folder"></i>
@@ -71,6 +86,59 @@
                     <div class="folder disabled" data-task="5">
                         <i class="fas fa-folder"></i>
                         <span>Task 5: Locked</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Task 1: Phishing Detection Window -->
+        <div class="window" id="task1-window">
+            <div class="window-header">
+                <span class="window-title">Task 1: Phishing Detection</span>
+                <div class="window-controls">
+                    <span class="minimize">−</span>
+                    <span class="maximize">□</span>
+                    <span class="close">×</span>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="task-container">
+                    <!-- Email List Section -->
+                    <div class="task-section">
+                        <div class="task-section-header">
+                            <i class="fas fa-envelope"></i> Emails
+                        </div>
+                        <div class="email-list">
+                            <!-- Email items will be dynamically added here -->
+                        </div>
+                    </div>
+
+                    <!-- Email Content Section -->
+                    <div class="task-section">
+                        <div class="task-section-header">
+                            <i class="fas fa-file-alt"></i> Email Content
+                        </div>
+                        <div class="email-content">
+                            <!-- Email content will be displayed here -->
+                        </div>
+                        <div class="action-buttons">
+                            <button class="task-button" id="mark-legitimate">
+                                <i class="fas fa-check"></i> Legitimate
+                            </button>
+                            <button class="task-button danger" id="mark-phishing">
+                                <i class="fas fa-exclamation-triangle"></i> Phishing
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Analysis Section -->
+                    <div class="task-section">
+                        <div class="task-section-header">
+                            <i class="fas fa-chart-bar"></i> Analysis
+                        </div>
+                        <div class="analysis-content">
+                            <!-- Analysis tools and results will be displayed here -->
+                        </div>
                     </div>
                 </div>
             </div>
